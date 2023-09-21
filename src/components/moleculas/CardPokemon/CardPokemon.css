@@ -2,9 +2,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 3em;
-  width: 20%;
-  height: 8em;
+  padding: 2.5em 4em;
+  width: 30%;
+  height: 8.5em;
   cursor: pointer;
   border-radius: 8px;
   background: currentColor;
@@ -27,11 +27,12 @@
   opacity: 0.1;
 }
 
-.pokemon-title{
+.pokemon-card > div:first-of-type {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-evenly;
+  max-width: 50%;
 }
 
 .types {

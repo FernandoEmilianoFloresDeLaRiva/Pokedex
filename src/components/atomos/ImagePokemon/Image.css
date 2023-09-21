@@ -2,6 +2,6 @@
   position: relative;
   bottom: 20%;
   height: 112%;
-  width: 100%;
+  max-width: 30vw;
   margin-left: auto;
 }

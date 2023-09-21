@@ -9,6 +9,7 @@
 }
 
 .pokemon-name {
+  text-align: left;
   font-weight: 600;
   font-size: min(35px, 6.5vw);
   color: #fff;

@@ -1,0 +1,31 @@
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+.loading {
+  text-align: center;
+  width: 40%;
+  animation: pulse 1.5s infinite 0.3s;
+  border-radius: 50%;
+  box-shadow: 0px 0px 50px red;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(0.4);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}

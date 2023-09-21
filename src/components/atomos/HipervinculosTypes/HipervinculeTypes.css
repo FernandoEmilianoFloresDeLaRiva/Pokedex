@@ -1,0 +1,90 @@
+a {
+  display: flex;
+  width: 2%;
+  padding: 1.5vw;
+  cursor: pointer;
+  border-radius: 100%;
+  background: currentColor;
+  transition: transform 0.3s;
+}
+
+a img {
+  width: 100%;
+  height: 100%;
+}
+
+a:hover {
+  transform: scale(1.2);
+}
+
+.bug {
+  color: #8bd674;
+}
+
+.dark {
+  color: #75747e;
+}
+
+.dragon {
+  color: #1582e7;
+}
+
+.electric {
+  color: #f2cb55;
+}
+
+.fairy {
+  color: #e98acc;
+}
+
+.fighting {
+  color: #eb4971;
+}
+
+.fire {
+  color: #ff9448;
+}
+
+.flying {
+  color: #829edb;
+}
+
+.ghost {
+  color: #6882d4;
+}
+
+.grass {
+  color: #8bbe8a;
+}
+
+.ground {
+  color: #f78551;
+}
+
+.ice {
+  color: #6bddce;
+}
+
+.normal {
+  color: #c5c9d6;
+}
+
+.poison {
+  color: #bd5fe9;
+}
+
+.psychic {
+  color: #ff787a;
+}
+
+.rock {
+  color: #d5c895;
+}
+
+.steel {
+  color: #4d92b4;
+}
+
+.water {
+  color: #58abf6;
+}

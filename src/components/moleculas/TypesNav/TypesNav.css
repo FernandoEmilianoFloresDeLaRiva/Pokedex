@@ -1,0 +1,14 @@
+.types-nav {
+  display: flex;
+  width: 50vw;
+  min-height: 2vh;
+  padding: 15px 2vw;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px auto;
+  gap: 10px;
+  background: #5b6169;
+  border-radius: 10vw;
+  box-shadow: 0 0 10px 5px #d5d5d5;
+}

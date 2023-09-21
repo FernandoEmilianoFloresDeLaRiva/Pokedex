@@ -1,0 +1,130 @@
+.pokemon-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 3em;
+  width: 20%;
+  height: 8em;
+  cursor: pointer;
+  border-radius: 8px;
+  background: currentColor;
+  transition: transform 0.2s;
+  box-shadow: 0 15px 40px 0 currentColor;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: url("../../../images/pokeball-transparent.svg");
+  opacity: 0.1;
+}
+
+.pokemon-title{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.types {
+  display: flex;
+  gap: 5px;
+}
+
+.types div {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.types div span {
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 1em;
+}
+
+.types div img {
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+}
+
+.types .bug {
+  background: #8cb230;
+}
+
+.types .dark {
+  background: #58575f;
+}
+
+.types .dragon {
+  background: #0f6ac0;
+}
+
+.types .electric {
+  background: #eed535;
+}
+
+.types .fairy {
+  background: #ed6ec7;
+}
+
+.types .fighting {
+  background: #d04164;
+}
+
+.types .fire {
+  background: #fd7d24;
+}
+
+.types .flying {
+  background: #748fc9;
+}
+
+.types .ghost {
+  background: #556aae;
+}
+
+.types .grass {
+  background: #62b957;
+}
+
+.types .ground {
+  background: #dd7748;
+}
+
+.types .ice {
+  background: #61cec0;
+}
+
+.types .normal {
+  background: #9da0aa;
+}
+
+.types .poison {
+  background: #a552cc;
+}
+
+.types .psychic {
+  background: #ea5d60;
+}
+
+.types .rock {
+  background: #baab82;
+}
+
+.types .steel {
+  background: #417d9a;
+}
+
+.types .water {
+  background: #4a90da;
+}

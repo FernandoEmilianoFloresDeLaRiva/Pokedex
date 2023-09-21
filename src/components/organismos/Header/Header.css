@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.logo-pokemon {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  font-family: "Pokemon Solid", sans-serif;
+  font-size: max(5vw, 5rem);
+  color: #ffcb05;
+  -webkit-text-stroke: 5px #3b5ca8;
+  text-shadow: -1px 0px 0px #1d2c5e;
+}
+
+.logo-pokemon::before {
+  content: "Pokédex";
+  position: absolute;
+  left: -5px;
+  bottom: -6px;
+  -webkit-text-stroke: transparent;
+  color: #1d2c5e;
+  z-index: -1;
+}

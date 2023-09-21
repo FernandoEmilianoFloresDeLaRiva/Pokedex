@@ -1,0 +1,15 @@
+.pokemon-name {
+  text-transform: capitalize;
+}
+
+.id-number {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pokemon-name {
+  font-weight: 600;
+  font-size: min(35px, 6.5vw);
+  color: #fff;
+}

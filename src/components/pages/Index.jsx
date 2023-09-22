@@ -5,18 +5,14 @@ import { usePokemons } from "../../hooks/usePokemons";
 
 function Index() {
   const [type, setType] = useState("");
-  const [all, setAll] = useState(true);
-  const { pokemonList, loading, types } = usePokemons(type, all);
+  const { pokemonList, loading, types, setAll } = usePokemons(type);
   return (
     <>
-      {/* {loading ? (
+      {loading ? (
         <Loading />
       ) : (
-        <Home funcion={setType} pokemons={pokemonList} typesNav={types} />
-      )} */}
-      <Suspense fallback={<Loading />}>
-        <Home funcion={setType} pokemons={pokemonList} typesNav={types} />
-      </Suspense>
+        <Home funcion={setType} pokemons={pokemonList} typesNav={types} seeAll={() => setAll(true)}/>
+      )}
     </>
   );
 }

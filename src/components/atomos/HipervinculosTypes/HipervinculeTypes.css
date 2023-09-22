@@ -6,6 +6,7 @@ a {
   border-radius: 100%;
   background: currentColor;
   transition: transform 0.3s;
+  box-shadow: 0px 0px 10px currentColor
 }
 
 a img {

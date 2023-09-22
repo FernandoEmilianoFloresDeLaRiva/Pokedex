@@ -10,7 +10,6 @@ function CardPokemon({ types, number, nombre, img, funcion }) {
       <div>
         <SpanText clase="id-number" texto={"#" + number} />
         <SpanText clase="pokemon-name" texto={nombre} />
-
         <div className="types">
           {types.map(({ name }) => {
             return (
@@ -22,7 +21,6 @@ function CardPokemon({ types, number, nombre, img, funcion }) {
           })}
         </div>
       </div>
-
       <Image img={img} name={nombre} />
     </article>
   );

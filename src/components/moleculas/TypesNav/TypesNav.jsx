@@ -3,7 +3,7 @@ import TypeAtom from "../../atomos/TypeAtom/TypeAtom";
 import HipervinculeTypes from "../../atomos/HipervinculosTypes/HipervinculeTypes";
 import "./TypesNav.css";
 
-function TypesNav({ funcion, types }) {
+function TypesNav({ funcion, types, seeAll }) {
   return (
     <nav className="types-nav">
       {types.map((type) => {
@@ -13,6 +13,9 @@ function TypesNav({ funcion, types }) {
           </HipervinculeTypes>
         );
       })}
+      <HipervinculeTypes funcion={seeAll} name="pokeball">
+        <TypeAtom name="pokeball"/>
+      </HipervinculeTypes>
     </nav>
   );
 }

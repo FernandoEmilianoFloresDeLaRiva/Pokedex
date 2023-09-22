@@ -5,11 +5,13 @@ import { pokemonData } from "../utils/pokemonData";
 import { getTypes } from "../services/typesService";
 import { getAllPokemons } from "../services/pokemonAll";
 
-export const usePokemons = (type, all, limit = 6, offset = 0) => {
+export const usePokemons = (type, limit = 6, offset = 0) => {
+  const [all, setAll] = useState(true);
   const [pokemonList, setPokemonList] = useState([]);
   const [types, setTypes] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    if (type === "" && all) return;
     setLoading(true);
     async function getPokemons() {
       try {
@@ -21,11 +23,11 @@ export const usePokemons = (type, all, limit = 6, offset = 0) => {
         const resolvePokemon = await Promise.all(result);
         setPokemonList(resolvePokemon);
         setLoading(false);
+        setAll(false)
       } catch (error) {
         console.error("Error al obtener los Pokémons:", error);
       }
     }
-    if (type === "" && all) return;
     getPokemons();
   }, [type]);
 
@@ -37,6 +39,7 @@ export const usePokemons = (type, all, limit = 6, offset = 0) => {
   }, []);
 
   useEffect(() => {
+    if(!all) return;
     setLoading(true);
     async function getAllPokemonsFunction() {
       try {
@@ -55,5 +58,5 @@ export const usePokemons = (type, all, limit = 6, offset = 0) => {
     getAllPokemonsFunction();
   }, [all]);
 
-  return { pokemonList, loading, types };
+  return { pokemonList, loading, types, setAll };
 };

@@ -17,6 +17,7 @@ import psychic from "../images/types-icons/psychic.svg";
 import rock from "../images/types-icons/rock.svg";
 import steel from "../images/types-icons/steel.svg";
 import water from "../images/types-icons/water.svg";
+import pokeball from "../images/pokeball.svg";
 
 export const useImg = (name) => {
   const [img, setImg] = useState(null);
@@ -75,6 +76,9 @@ export const useImg = (name) => {
         break;
       case "water":
         setImg(water);
+        break;
+      case "pokeball":
+        setImg(pokeball);
         break;
     }
   }, [name]);

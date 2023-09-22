@@ -4,9 +4,9 @@ import Image from "../../atomos/ImagePokemon/Image";
 import "./CardPokemon.css";
 import TypeAtom from "../../atomos/TypeAtom/TypeAtom";
 
-function CardPokemon({ types, number, nombre, img }) {
+function CardPokemon({ types, number, nombre, img, funcion }) {
   return (
-    <article className={`pokemon-card ${types[0].name}`}>
+    <article className={`pokemon-card ${types[0].name}`} onClick={funcion}>
       <div>
         <SpanText clase="id-number" texto={"#" + number} />
         <SpanText clase="pokemon-name" texto={nombre} />

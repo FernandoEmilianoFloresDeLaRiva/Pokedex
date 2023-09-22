@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useImg } from "../../../hooks/useImg";
 
 function TypeAtom({ name }) {

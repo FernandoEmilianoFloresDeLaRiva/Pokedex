@@ -4,8 +4,9 @@ import Loading from "../atomos/Loading/Loading";
 import { usePokemons } from "../../hooks/usePokemons";
 
 function Index() {
-  const [type, setType] = useState("fire");
-  const { pokemonList, loading, types } = usePokemons(type);
+  const [type, setType] = useState("");
+  const [all, setAll] = useState(true);
+  const { pokemonList, loading, types } = usePokemons(type, all);
   return (
     <>
       {/* {loading ? (

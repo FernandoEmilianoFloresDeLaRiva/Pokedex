@@ -4,13 +4,16 @@ import "./PokemonContainer.css";
 import { PokemonContext } from "../../../context/PokemonContext";
 
 function PokemonContainer({ pokemonList }) {
-  const { setPokemon } = useContext(PokemonContext);
-
+  const { setPokemon, setAbrirModal } = useContext(PokemonContext);
+  const funcionPokemon = (pokemon) => {
+    setPokemon(pokemon);
+    setAbrirModal(true);
+  };
   return (
     <div className="pokemons-container">
       {pokemonList.map((pokemon) => (
         <CardPokemon
-          funcion={() => setPokemon(pokemon)}
+          funcion={() => funcionPokemon(pokemon)}
           key={pokemon.id}
           types={pokemon.types}
           number={pokemon.id}

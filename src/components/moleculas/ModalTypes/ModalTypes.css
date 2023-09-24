@@ -1,0 +1,9 @@
+.pokemon-content .types div {
+  display: flex;
+  align-items: center;
+  padding: 4px 5px;
+}
+
+.pokemon-content .types span {
+  font-size: 13px;
+}

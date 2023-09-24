@@ -1,7 +1,3 @@
-.pokemon-name {
-  text-transform: capitalize;
-}
-
 .id-number {
   font-size: 0.9rem;
   font-weight: 800;
@@ -9,8 +5,28 @@
 }
 
 .pokemon-name {
+  text-transform: capitalize;
   text-align: left;
   font-weight: 600;
   font-size: min(35px, 6.5vw);
   color: #fff;
+}
+
+.modal-container .id-number {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container .pokemon-name {
+  font-size: 7.2vw;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.categoria {
+  padding: 0 10vw 0 0;
+  font-weight: 600;
+  color: #3d3d40;
+  text-transform: capitalize;
 }

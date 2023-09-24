@@ -1,0 +1,15 @@
+.state-container {
+  box-shadow: 0px 0px 10px currentColor;
+  border-radius: 50%;
+  background-color: currentColor;
+  width: 30%;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.state-content {
+  color: #fff;
+  font-weight: 600;
+}

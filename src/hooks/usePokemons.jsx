@@ -39,7 +39,6 @@ export const usePokemons = (type, all, visible) => {
       const getAllPokemonsFunction = async () => {
         try {
           const allPokemons = await getAllPokemons(page);
-          console.log(allPokemons);
           const results = allPokemons.results.map(async (pokemon) => {
             const res = await particularPokemon(pokemon.url);
             return pokemonData(res);
@@ -56,5 +55,5 @@ export const usePokemons = (type, all, visible) => {
     }
   }, [all, visible, isLoadingMore, page]);
 
-  return { pokemonList, loading, setPokemonList };
+  return { pokemonList, loading, setPokemonList, isLoadingMore };
 };

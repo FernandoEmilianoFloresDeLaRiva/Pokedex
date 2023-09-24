@@ -1,0 +1,9 @@
+.modal-header {
+  padding: 2vh 6vw 0 6vw;
+  flex: 1;
+}
+
+.pokemon-content {
+  display: flex;
+  align-items: center;
+}

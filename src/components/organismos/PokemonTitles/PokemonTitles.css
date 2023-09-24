@@ -1,0 +1,8 @@
+.pokemon-content .types {
+  display: flex;
+}
+
+.pokemon-content > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+}

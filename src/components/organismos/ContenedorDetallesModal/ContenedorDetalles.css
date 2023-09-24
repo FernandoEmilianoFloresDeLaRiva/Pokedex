@@ -1,0 +1,36 @@
+.contenedor-detalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 2vh;
+}
+
+.asunto-modal {
+  color: #3d3d40;
+  font-weight: 600;
+}
+
+.tiposM-contenedor {
+  display: flex;
+}
+
+.types-detalles {
+  display: flex;
+  margin-right: 5px;
+  width: max(22px, 1.8vw);
+  height: max(22px, 1.8vw);
+  padding: 5px;
+  border-radius: 3px;
+  background: currentColor;
+}
+
+.contenedor-detalles .types {
+  text-align: left;
+  display: flex;
+  gap: 4em;
+}
+
+.contenedor-detalles .types .container-typesM {
+  display: flex;
+  gap: 1em;
+}

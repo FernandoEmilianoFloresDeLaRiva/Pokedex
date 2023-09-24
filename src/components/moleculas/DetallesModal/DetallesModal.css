@@ -1,0 +1,11 @@
+.todos-detalles {
+  display: flex;
+  gap: 1em;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.detallesModal {
+  width: 20%;
+  text-align: left;
+}

@@ -5,3 +5,9 @@
   max-width: 30vw;
   margin-left: auto;
 }
+
+.pokemon-content img {
+  width: 50%;
+  height: 100%;
+  margin-right: 3%;
+}

@@ -1,0 +1,22 @@
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  background: currentColor;
+  overflow: hidden;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: url("../../../images/pokeball-transparent.svg");
+  opacity: 0.1;
+}

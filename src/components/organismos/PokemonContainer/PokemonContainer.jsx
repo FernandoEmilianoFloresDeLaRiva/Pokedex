@@ -11,16 +11,18 @@ function PokemonContainer({ pokemonList }) {
   };
   return (
     <div className="pokemons-container">
-      {pokemonList.map((pokemon) => (
-        <CardPokemon
-          funcion={() => funcionPokemon(pokemon)}
-          key={pokemon.id}
-          types={pokemon.types}
-          number={pokemon.id}
-          nombre={pokemon.name}
-          img={pokemon.img}
-        />
-      ))}
+      {pokemonList.map((pokemon) => {
+        return (
+          <CardPokemon
+            funcion={() => funcionPokemon(pokemon)}
+            key={pokemon.id}
+            types={pokemon.types}
+            number={pokemon.id}
+            nombre={pokemon.name}
+            img={pokemon.img}
+          />
+        );
+      })}
     </div>
   );
 }

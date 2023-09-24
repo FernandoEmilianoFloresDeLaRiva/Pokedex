@@ -9,11 +9,12 @@
 
 .evolucion {
   width: 40%;
-  height: 10em;
+  height: 8em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1em;
 }
 
 .arrow {

@@ -9,9 +9,13 @@ export const useEvolutions = (id) => {
     setLoading(true);
     const conseguirEvolucion = async () => {
       const url = await getURLEvolution(id);
-      const { chain } = await apiGet(url);
-      const evolutions = await conseguirEvoluciones(chain);
-      setPokemonEvolution(evolutions);
+      if (url) {
+        const { chain } = await apiGet(url);
+        const evolutions = await conseguirEvoluciones(chain);
+        setPokemonEvolution(evolutions);
+      } else {
+        setPokemonEvolution([]);
+      }
       setLoading(false);
     };
     conseguirEvolucion();

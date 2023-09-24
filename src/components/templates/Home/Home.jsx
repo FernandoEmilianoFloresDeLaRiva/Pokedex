@@ -12,19 +12,20 @@ function Home() {
   const [all, setAll] = useState(true);
   const { types, loadingTypes } = useTypes();
   const { visible, elementRef } = useNearScreen();
-  const { pokemonList, loading, setPokemonList } = usePokemons(
-    type,
-    all,
-    visible
-  );
+  const { pokemonList, loading, setPokemonList, setPage, setInicio } =
+    usePokemons(type, all, visible);
   const setAllFunction = () => {
     setAll(true);
     setType("");
     setPokemonList([]);
+    setInicio(0);
   };
   const setPokemonTypes = (name) => {
     setType(name);
     setAll(false);
+    setPage(0);
+    setInicio(0);
+    setPokemonList([]);
   };
   return (
     <div className="container-index">
@@ -41,7 +42,7 @@ function Home() {
         {loading ? (
           <Loading />
         ) : (
-          <PokemonContainer type={type} all={all} pokemonList={pokemonList} />
+          <PokemonContainer pokemonList={pokemonList} />
         )}
         <div ref={elementRef}></div>
       </main>

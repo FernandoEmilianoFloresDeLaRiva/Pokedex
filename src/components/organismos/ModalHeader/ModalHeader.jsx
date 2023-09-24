@@ -10,7 +10,7 @@ function ModalHeader({ pokemon }) {
   return (
     <div className={`modal-header`}>
       <div>
-        <BackButton funcion={() => setAbrirModal(false)} />
+        <BackButton funcion={setAbrirModal} />
         <div className="pokemon-content">
           <Image img={pokemon.img} name={pokemon.name} />
           <PokemonTitles pokemon={pokemon} />

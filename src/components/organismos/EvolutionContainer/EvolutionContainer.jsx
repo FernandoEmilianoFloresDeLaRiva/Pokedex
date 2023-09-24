@@ -4,7 +4,7 @@ import "./EvolutionContainer.css";
 import { useEvolutions } from "../../../hooks/useEvolutions";
 import Loading from "../../atomos/Loading/Loading";
 import SpanText from "../../atomos/SpanText/SpanText";
-import ImageBack from '../../atomos/ImageBack/ImageBack'
+import ImageBack from "../../atomos/ImageBack/ImageBack";
 
 function EvolutionContainer({ pokemon }) {
   const { pokemonEvolution, loading } = useEvolutions(pokemon.name);
@@ -28,14 +28,17 @@ function EvolutionContainer({ pokemon }) {
                   />
                 </div>
                 <div className="arrow">
-                  <ImageBack/>
+                  <ImageBack />
                 </div>
                 <div className="evolucion">
                   <Evolution
                     src={pokemonE.next.image}
                     name={pokemonE.next.name}
                   />
-                  <SpanText texto={pokemonE.next.name} clase="nombre-evolution"/>
+                  <SpanText
+                    texto={pokemonE.next.name}
+                    clase="nombre-evolution"
+                  />
                 </div>
               </div>
             );

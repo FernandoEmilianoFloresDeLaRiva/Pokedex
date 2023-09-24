@@ -31,8 +31,22 @@
   text-transform: capitalize;
 }
 
-.nombre-evolution{
+.nombre-evolution {
   margin-top: -2vh;
   text-transform: capitalize;
   font-weight: 600;
+}
+
+.advertencia {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #ff9448;
+  text-transform: capitalize;
+}
+
+.advertencia::after {
+  color: #ff9448;
+  content: "_________________________";
+  display: block;
+  margin-top: -1em;
 }

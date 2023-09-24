@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import HipervinculeTypes from "../../atomos/HipervinculosTypes/HipervinculeTypes";
 import "./PokemonNav.css";
 import ContenedorState from "../../organismos/ContenedorState/ContenedorState";
 import ContenedorDetalles from "../../organismos/ContenedorDetallesModal/ContenedorDetalles";
+import Movimientos from "../../organismos/Movimientos/Movimientos";
+import EvolutionContainer from "../../organismos/EvolutionContainer/EvolutionContainer";
+import Loading from "../../atomos/Loading/Loading";
 
 function PokemonNav({ pokemon }) {
   const [actualNav, setActualNav] = useState(0);
   const navBar = [
     { id: "Detalles", componente: <ContenedorDetalles pokemon={pokemon} /> },
     { id: "Stats", componente: <ContenedorState pokemon={pokemon} /> },
-    { id: "Evoluciones" },
-    { id: "Habilidades" },
+    { id: "Evoluciones", componente: <EvolutionContainer pokemon={pokemon} /> },
+    {
+      id: "Movimientos",
+      componente: <Movimientos movimientos={pokemon.moves} />,
+    },
   ];
   return (
     <>
@@ -27,7 +33,11 @@ function PokemonNav({ pokemon }) {
           );
         })}
       </nav>
-      <div className="contenedor-datos">{navBar[actualNav].componente}</div>
+      <div className="contenedor-datos">
+        <Suspense fallback={<Loading />}>
+          {navBar[actualNav].componente}
+        </Suspense>
+      </div>
     </>
   );
 }

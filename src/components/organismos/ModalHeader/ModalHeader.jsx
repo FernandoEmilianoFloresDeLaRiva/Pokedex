@@ -9,7 +9,7 @@ function ModalHeader({ pokemon }) {
   const { setAbrirModal } = useContext(PokemonContext);
   return (
     <div className={`modal-header`}>
-      <div className="pokemon-container">
+      <div>
         <BackButton funcion={() => setAbrirModal(false)} />
         <div className="pokemon-content">
           <Image img={pokemon.img} name={pokemon.name} />

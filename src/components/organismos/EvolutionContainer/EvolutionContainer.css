@@ -1,0 +1,25 @@
+.container-evolutions {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2em;
+}
+
+.evolucion {
+  width: 40%;
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  background-color: currentColor;
+  transform: scaleX(-1);
+  width: 5%;
+  height: 2em;
+  border-radius: 50%;
+}

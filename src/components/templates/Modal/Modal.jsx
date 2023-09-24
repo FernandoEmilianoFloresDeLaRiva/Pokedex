@@ -7,7 +7,7 @@ function Modal({ pokemon }) {
   return (
     <div className={`modal ${pokemon.types[0].name}`}>
       <ModalHeader pokemon={pokemon} />
-      <PokemonNav pokemon={pokemon}/>
+      <PokemonNav pokemon={pokemon} />
     </div>
   );
 }

@@ -6,8 +6,8 @@ function ContenedorState({ pokemon }) {
     <div className="container-states">
       {pokemon.stats.map((state) => {
         return (
-          <div className="states-asunto">
-            <States name={pokemon.types[0].name} key={state.stat.name}>
+          <div className="states-asunto"  key={state.stat.name}> 
+            <States name={pokemon.types[0].name}>
               {state.base_stat}
             </States>
             {state.stat.name}

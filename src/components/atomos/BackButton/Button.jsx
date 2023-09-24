@@ -1,13 +1,13 @@
-import React from 'react'
-import back from "../../../images/back.svg";
-import './Button.css'
+import React from "react";
+import ImageBack from "../ImageBack/ImageBack";
+import "./Button.css";
 
-function Button({ funcion}) {
+function Button({ funcion }) {
   return (
-    <button onClick={funcion} >
-        <img src={back} className='back'/>
+    <button onClick={funcion}>
+      <ImageBack />
     </button>
-  )
+  );
 }
 
-export default Button
+export default Button;

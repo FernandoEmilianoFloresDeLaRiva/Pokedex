@@ -8,9 +8,15 @@ function ContenedorDetalles({ pokemon }) {
   return (
     <div className="contenedor-detalles">
       <DetallesModal categoria="peso:" texto={`${pokemon.weight / 10}kg`} />
-      <DetallesModal categoria="altura:" texto={`${pokemon.height / 10}kg`} />
+      <DetallesModal categoria="altura:" texto={`${pokemon.height / 10}m`} />
       {pokemon.abilities.map(({ ability }) => {
-        return <DetallesModal key={ability.name} categoria="habilidad:" texto={ability.name} />;
+        return (
+          <DetallesModal
+            key={ability.name}
+            categoria="habilidad:"
+            texto={ability.name}
+          />
+        );
       })}
 
       <div className="types">
